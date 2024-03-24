@@ -1,3 +1,23 @@
+# Run on docker
+# Building the docker image
+ Run the below command
+
+``docker build -t docker-react-image:1.0 .``
+
+Once the build is completed, let’s run
+
+``docker image ls``
+
+to list all the images. You should be able to see the newly created image.
+
+# Create and run a container with the image
+Execute the command
+
+``docker run -d -p 4000:80 --name docker-react-container docker-react-image:1.0``
+
+# Running the application
+Go to localhost:4000.
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
