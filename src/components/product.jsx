@@ -67,13 +67,11 @@ function Product() {
           Back
         </Link>
 
-        <h3>Comparing...</h3>
-
         <div className="flex gap-3 items-stretch w-full">
           <div className="flex-1 space-y-3">
             <h3 className="tough-text text-lg md:text-2xl">{product?.name}</h3>
             <img
-              className="w-[200px] h-[150px]"
+              className="w-[200px] h-[150px] lg:w-[400px] lg:h-[300px]"
               src={product?.image}
               alt={product?.name}
             />
@@ -87,16 +85,16 @@ function Product() {
                 {comparedProduct?.name}
               </h3>
               <img
-                className="w-[200px] h-[150px]"
+                className="w-[200px] h-[150px] lg:w-[400px] lg:h-[300px]"
                 src={comparedProduct?.image}
                 alt={comparedProduct?.name}
               />
             </div>
           ) : (
-            <div className="text-xs space-y-3 flex-1">
+            <div className=" lg:text-smlg:text-sm space-y-3 flex-1">
               <p>Select a product to compare </p>
               {productList.length >= 1 && (
-                <div className="flex flex-col bg-gray-600 text-white dark:bg-white dark:text-black text-start overflow-y-auto max-h-[200px]">
+                <div className="flex flex-col bg-gray-600 text-white dark:bg-white dark:text-black text-start overflow-y-auto max-h-[320px]">
                   {productList.map((item, index) => (
                     <Link
                       className="w-full py-2 px-4 hover:bg-gray-900 dark:hover:bg-gray-200"
@@ -118,7 +116,7 @@ function Product() {
           <div className="py-4 text-center uppercase tough-text bg-gray-900 text-white dark:bg-white dark:text-black w-full my-8">
             Comparison
           </div>
-          <div className="space-y-3 w-10/12 mx-auto text-xs">
+          <div className="space-y-3 w-10/12 mx-auto text-xs lg:text-sm">
             <h3>Description</h3>
             <div className="flex gap-3 items-stretch">
               <p className="flex-1">{product?.desc}</p>

@@ -19,7 +19,7 @@ function ExpandedCard({ handleSelect, name, image, desc, price, id }) {
         <figcaption className="p-4 sm:min-w-[250px] space-y-3 w-full">
           <h2 className="tough-text text-base truncate">{name}</h2>
           <p>{desc}</p>
-          <p>{price}</p>
+          <p>${price}</p>
           <div className="pt-2">
             <Link
               to={`/product/compare?cid=${id}&tid=`}
