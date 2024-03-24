@@ -20,12 +20,14 @@ function ExpandedCard({ handleSelect, name, image, desc, price, id }) {
           <h2 className="tough-text text-base truncate">{name}</h2>
           <p>{desc}</p>
           <p>{price}</p>
-          <Link
-            to={`/product/compare?cid=${id}&tid=`}
-            className="w-fit text-white px-4 pt-2 pb-3 cursor-pointer bg-green-600 rounded"
-          >
-            Compare Product
-          </Link>
+          <div className="pt-2">
+            <Link
+              to={`/product/compare?cid=${id}&tid=`}
+              className="w-fit text-white px-4 pt-2 pb-3 cursor-pointer bg-green-600 rounded"
+            >
+              Compare Product
+            </Link>
+          </div>
         </figcaption>
       </figure>
     </div>
