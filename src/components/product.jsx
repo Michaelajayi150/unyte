@@ -46,9 +46,9 @@ function Product() {
   ) : (
     <>
       <div className="mt-8 space-y-3 w-10/12 mx-auto">
-        <Link
-          className="text-start text-sm hover:text-red-500 w-fit underline underline-offset-8 flex gap-1"
-          to="/"
+        <div
+          className="text-start text-sm hover:text-red-500 w-fit underline underline-offset-8 flex gap-1 cursor-pointer"
+          onClick={() => navigate(-1)}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -65,7 +65,7 @@ function Product() {
             />
           </svg>
           Back
-        </Link>
+        </div>
 
         <div className="flex gap-3 items-stretch w-full">
           <div className="flex-1 space-y-3">
